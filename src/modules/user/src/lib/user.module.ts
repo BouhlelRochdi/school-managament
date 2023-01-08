@@ -1,30 +1,29 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+// import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
 import { MaterialModule } from 'src/modules/material/material.module';
-import { AppRoutingModule } from './app-routing.module';
+import { UserComponent } from './components/user/user.component';
+import { UserRoutingModule } from './user.module-routing';
 
-import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent
+    UserComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     MaterialModule,
-    RouterModule
+    UserRoutingModule,
+    // FlexLayoutModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports: [
+  ],
+  providers: [
+  ]
 })
-export class AppModule { }
+export class UserModule { }
